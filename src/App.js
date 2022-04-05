@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Table from "./components/table";
+import { tableData } from "./data";
 
 function App() {
+  const columns = [
+    { field: "id", header: "#" },
+    { field: "name", header: "Name" },
+    { field: "address", header: "Address" },
+    { field: "date", header: "Date" },
+    { field: "order", header: "Order No" },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>React-App</h2>
+      <h4>Building a Reusable Table Component</h4>
+      <Table data={tableData} columns={columns} hover={true} striped={true} />
     </div>
   );
 }
