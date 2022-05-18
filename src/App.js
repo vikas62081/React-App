@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import useGetAPI from "./hooks/useGetAPI";
 
 function App() {
+  const { error, data, loading } = useGetAPI(
+    "https://jsonplaceholder.typicode.com/posts"
+  );
+  console.log(data);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>React Custom Hooks</h2>
+      {loading && <h3>Loading...</h3>}
+      {error && error.message}
+      {data && data.map((post) => <p>{post.title}</p>)}
     </div>
   );
 }
