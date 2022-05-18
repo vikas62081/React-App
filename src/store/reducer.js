@@ -2,12 +2,35 @@ import { ADD_TODO, DELETE_TODO, UPDATE_TODO } from "./actionType";
 
 const initialState = {
   todos: [
-    { id: 1, title: "Let's Play", due_date: "2022-05-07", status: "Pending" },
+    {
+      id: 1,
+      title: "Learn CRUD Operations in one go",
+      due_date: "2022-05-07",
+      status: "Pending",
+    },
     {
       id: 2,
-      title: "Go to market",
-      due_date: "2022-05-14",
+      title: "Learn Redux from Scratch",
+      due_date: "2022-05-15",
+      status: "Pending",
+    },
+    {
+      id: 3,
+      title: "Build todo Application",
+      due_date: "2022-05-17",
+      status: "Pending",
+    },
+    {
+      id: 4,
+      title: "Start Learning",
+      due_date: "2022-05-20",
       status: "Completed",
+    },
+    {
+      id: 5,
+      title: "Subscribe Codenemy for React Tutorial",
+      due_date: "2022-05-08",
+      status: "Pending",
     },
   ],
 };

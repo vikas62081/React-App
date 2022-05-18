@@ -14,7 +14,7 @@ const Todo = ({ todo, handleDelete, handleUpdate }) => {
         primary={todo.title}
         secondary={
           <>
-            {todo.due_date}
+            {new Date(todo.due_date).toDateString()}
             <Chip
               component={"span"}
               label={todo.status}
