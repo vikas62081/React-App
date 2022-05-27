@@ -1,0 +1,10 @@
+.logo{
+    float: left;
+    margin-right: 100px;
+}
+.nav-bar{
+    float: right;
+}
+.site-layout-content{
+padding: 16px 20px;
+}
